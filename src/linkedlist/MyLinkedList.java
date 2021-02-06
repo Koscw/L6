@@ -1,8 +1,7 @@
-
 package linkedlist;
 
 public class MyLinkedList {
-      //  List<String> list = new LinkedList<String>();
+    //  List<String> list = new LinkedList<String>();
 
     Node first;
     Node last;
@@ -34,11 +33,11 @@ public class MyLinkedList {
         System.out.println(current.element);
         return current.element;
     }
-    private boolean ElementIndex(int index){
+    private boolean elementIndex(int index){
         return index>=0 && index<size;
     }
-    private void CheckElementIndex(int index){
-        if(!ElementIndex(index)){
+    private void checkElementIndex(int index){
+        if(!elementIndex(index)){
             throw new IndexOutOfBoundsException();
         }
     }
@@ -98,7 +97,7 @@ public class MyLinkedList {
         size++;
     }
     public Integer set(int index, int element) {
-        CheckElementIndex(index);
+        checkElementIndex(index);
         Node x = node(index);
         Integer oldVal = x.element;
         x.element = element;
@@ -135,6 +134,5 @@ public class MyLinkedList {
     }
 
 }
-
 
 
